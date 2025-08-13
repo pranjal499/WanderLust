@@ -1,0 +1,24 @@
+{
+  "name": "wanderlust",
+  "version": "1.0.0",
+  "description": "A platform that connects tourist to hotels. Tourist can find available hotel room and hotels can list themselves to increse bookings.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranjal499/WanderLust.git"
+  },
+  "author": "Pranjal Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranjal499/WanderLust/issues"
+  },
+  "homepage": "https://github.com/pranjal499/WanderLust#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.1"
+  }
+}

@@ -1,0 +1,16 @@
+<% layout('/layouts/boilarplate.ejs') %>
+<body>
+    <h3>Listing details</h3>
+    <ul>
+        <li><%= item.title%></li>
+        <li><%= item.description%></li>
+        <li>&#8377;<%= item.price.toLocaleString("en-in")%></li>
+        <li><%= item.location%></li>
+    </ul>
+    <br>
+    <a href="/listings/<%= item._id%>/edit">Edit Listing</a>
+    <br>
+    <form action="/listings/<%= item._id%>?_method=delete" method="post">
+        <button>Delete</button>
+    </form>
+</body>

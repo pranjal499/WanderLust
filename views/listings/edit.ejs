@@ -1,0 +1,20 @@
+<%- layout('/layouts/boilarplate.ejs') %>
+<body>
+    <h3>Edit <%= item.title %></h3>
+
+    <form action="/listings/<%= item._id%>?_method=put" method="post">
+        <input type="text" name="listing[title]" placeholder="Enter title" value="<%= item.title %>">
+        <br><br>
+        <textarea placeholder="Enter title" name="listing[description]"><%= item.description %></textarea>   
+        <br><br>
+        <input type="text" name="listing[image]" placeholder="Enter image link/URL" value="<%= item.image %>">
+        <br><br>
+        <input type="number" name="listing[price]" placeholder="Enter price" value="<%= item.price %>">
+        <br><br>
+        <input type="text" name="listing[country]" placeholder="Country" value="<%= item.country %>">
+        <br><br>
+        <input type="text" name="listing[location]" placeholder="Enter location" value="<%= item.location %>">
+        <br><br>
+        <button>Update</button>
+    </form>
+</body>

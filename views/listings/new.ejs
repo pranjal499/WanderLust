@@ -1,0 +1,20 @@
+<%- layout('/layouts/boilarplate.ejs') %>
+<body>
+    <h3>Create a new Listing</h3>
+    <form action="/listings" method="post">
+        <input type="text" name="listing[title]" placeholder="Enter title">
+        <br><br>
+        <textarea placeholder="Enter title" name="listing[description]"></textarea>   
+        <br><br>
+        <input type="text" name="listing[image]" placeholder="Enter image link/URL">
+        <br><br>
+        <input type="number" name="listing[price]" placeholder="Enter price">
+        <br><br>
+        <input type="text" name="listing[country]" placeholder="Country">
+        <br><br>
+        <input type="text" name="listing[location]" placeholder="Enter location">
+        <br><br>
+        <button>Add</button>
+    </form>
+</body>
+</html>

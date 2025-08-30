@@ -113,3 +113,9 @@ body {
 .btn-add:hover {
     background-color: #cf2b36 !important;
 }
+
+/* Show */
+.show-btns {
+    display: flex;
+    justify-content: space-between;
+}

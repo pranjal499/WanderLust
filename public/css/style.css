@@ -62,14 +62,14 @@ body {
 }
 
 /* Cards */
-.card {
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
     width: 20rem;
     transition: 0.3s;
 }
 
-.card:hover {
+.listing-card:hover {
     /* box-shadow: 2px 2px 20px rgb(234, 234, 234); */
     width: 20.5rem;
     
@@ -107,11 +107,13 @@ body {
 
 .btn-add {
     background-color: #fe424d !important;
+    color: white !important;
     border: none !important;
 }
 
 .btn-add:hover {
     background-color: #cf2b36 !important;
+    color: white !important;
 }
 
 /* Show */

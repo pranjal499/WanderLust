@@ -133,6 +133,10 @@ app.use(attachAuthState);
 //     res.send(registeredUser);
 // });  
 
+app.get('/', (req, res) => {
+    res.redirect('/listings');
+});
+
 // Reviews rout (must be registered before listings to avoid route conflicts):
 app.use('/listings/:id/reviews', reviewsRout);
 

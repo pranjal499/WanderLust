@@ -161,3 +161,28 @@ body {
     align-items: center;
 }
 
+/* Search styling */
+.search-btn {
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 0 1rem !important;
+}
+
+.search-btn:hover {
+    background-color: #cf2b36 !important;
+    color: #fff !important;
+}
+
+.search-btn i {
+    display: inline;
+    margin-right: 0.5rem !important;
+}
+
+/* Search input  */
+.search-inp {
+    border-radius: 25px !important;
+    padding: 0.5rem 3rem !important;
+    font-size: 0.8rem !important;
+}

@@ -8,6 +8,7 @@ const ejsMate = require('ejs-mate');
 const ExpressError = require('./utils/ExpressError.js');
 const session = require('express-session');
 const MongoStore = require('connect-mongo').default;
+// const MongoStore = require("connect-mongo");
 const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
@@ -16,6 +17,7 @@ const {attachAuthState} = require('./utils/auth.js');
 if (process.env.NODE_ENV != 'production') {
     require('dotenv').config()
 }
+const dns = require('dns')
 
 
 // Requiring routs:
@@ -54,16 +56,30 @@ async function main() {
 main();
 
 // Mongo session options:
+// const store = MongoStore.create({
+//     mongoUrl: uri, 
+//     crypto: {
+//         secret: process.env.SECRET
+//     }, 
+//     touchAfter: 24 * 3600
+// });
+
+// store.on('error', () => {
+//     console.log('ERROR IN MONGO SESSION STORE', err);
+// });
+
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 const store = MongoStore.create({
-    mongoUrl: uri, 
+    mongoUrl: uri,
     crypto: {
         secret: process.env.SECRET
-    }, 
+    },
     touchAfter: 24 * 3600
 });
 
-store.on('error', () => {
-    console.log('ERROR IN MONGO SESSION STORE', err);
+store.on("error", function(err) {
+    console.log("SESSION STORE ERROR:", err);
 });
 
 // session options:

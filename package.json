@@ -1,13 +1,13 @@
 {
   "engines": {
-    "node": "22.16.0"
+    "node": "20.x"
   },
   "name": "wanderlust",
   "version": "1.0.0",
   "description": "A platform that connects tourist to hotels. Tourist can find available hotel room and hotels can list themselves to increse bookings.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
